@@ -1,0 +1,6 @@
+equation = input("what is 6!") 
+if equation == "720": 
+    print("correct") 
+else: 
+    print("incorrect")
+    

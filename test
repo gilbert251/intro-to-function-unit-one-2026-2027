@@ -1,25 +1,13 @@
-import turtle
+def calculate_tip():
+    bill=50
+    service=input("how was it? good or bad: ")
+    if service=="bad":
+        tip=0.1
+    elif service=="good":
+        tip=0.2
+    else:
+        tip=0.15
+    total=bill+(bill * tip)
+    print("your total is: ", total)
 
-t = turtle.Turtle()
-t.shape('turtle')
-t.speed(3)
-TURN_ANGLE = 90
-
-def draw_square(side_length):
-    for _ in range(4):
-        t.forward(side_length)
-        t.left(TURN_ANGLE)
-
-        shapes_queue = [
-    {"msg": "Drawing a square...", "size": 100, "x": 0, "y": 0},
-    {"msg": "Drawing boom shape...", "size": 50, "x": 150, "y": 0}
-]
-for shape in shapes_queue:
-    # Print the custom message
-    print(shape["msg"])
-     t.penup()
-    t.goto(shape["x"], shape["y"])
-    t.pendown()
-    draw_square(shape["size"])
-
-turtle.done()
+calculate_tip()
